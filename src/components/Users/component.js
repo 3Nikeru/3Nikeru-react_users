@@ -1,24 +1,24 @@
 // import Image from '../shared/Image/component';
 // import Link from '../shared/Link/component';
-import Post from './Post';
+import User from './User';
 import data from './mockData'
 import './style.scss';
 
-function Posts(){
+function Users(){
   console.log(data)
     return ( 
       <div>
-        <h1>Posts</h1>
-        <ul>
+        <h1>Users</h1>
+        <div className='container'>
             {data.map((post) =>(
-            <Post 
+            <User 
             key={post.id}
             {...post}
             />
             ))}
-        </ul>
+        </div>
       </div>
     );
 }
 
-export default Posts;
+export default Users;
